@@ -1,0 +1,17 @@
+	public String reverseString(String s) {
+        if(s==null||s ==""||s.lengths()==1) return s;
+        int n = s.length();
+        int l = 0;
+        int r = n-1;
+        char[] chars = s.toCharArray();
+        //List<Character> list = Arrays.asList(chars);
+        //Collections.reverse(list);
+        while(l<r){
+            char temp = chars[r];
+            chars[r] = chars[l];
+            chars[l] = temp;
+            l++;
+            r--;
+        }
+        return new String(chars);
+		}
